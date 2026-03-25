@@ -1,0 +1,213 @@
+{
+"alpha": {
+"explanation": "Alpha is the excess return of an investment relative to a benchmark.",
+"example": "If a portfolio returns 12% while the benchmark returns 9%, the extra 3% can be considered alpha.",
+"common_mistake": "Confusing alpha with any positive return.",
+"quiz": [
+"What does alpha measure?",
+"Is alpha the same as total return?"
+]
+},
+"volatility": {
+"explanation": "Volatility measures how much the price of an asset changes over time.",
+"example": "A stock that moves from 10 to 15 to 8 is more volatile than one that stays near 10.",
+"common_mistake": "Thinking volatility always means loss.",
+"quiz": [
+"Does high volatility mean prices move a lot or a little?",
+"Can an asset be volatile even if it sometimes rises?"
+]
+},
+"sharpe ratio": {
+"explanation": "The Sharpe ratio measures return relative to risk.",
+"example": "If two strategies earn similar returns, the one with lower volatility may have a better Sharpe ratio.",
+"common_mistake": "Assuming high returns automatically mean a good Sharpe ratio.",
+"quiz": [
+"What two things does the Sharpe ratio compare?",
+"Can a strategy with high returns still have a poor Sharpe ratio?"
+]
+},
+
+"Probability and Random Variables": {
+"explanation": "Probability is one of the foundations of quantitative finance because markets are uncertain and outcomes are never perfectly predictable. In quant work, probability helps describe the likelihood of events such as a stock going up, a portfolio losing more than a threshold, or a trading signal being correct. A random variable is a numerical quantity whose value depends on the outcome of some uncertain process. For example, tomorrow's stock return can be modeled as a random variable. Quants use concepts such as probability distributions, expectation, variance, standard deviation, and covariance to describe uncertainty. Discrete random variables take countable values, while continuous random variables can take values over intervals. Expected value measures the average outcome over many repeated trials, while variance measures how spread out outcomes are around the average. In finance, this matters because two assets may have the same average return but very different levels of uncertainty. Probability also supports risk modeling, derivative pricing, simulation, and statistical inference. Understanding probability allows a quant to build models that estimate likely returns, extreme risks, and relationships between financial variables.",
+"example": "1. Modeling daily stock returns as a random variable with a mean and variance.\n2. Estimating the probability that a portfolio loses more than 2% in one day.\n3. Using expected value to compare the average payoff of two trading strategies.",
+"common_mistake": "A common mistake is assuming that a high-probability event is guaranteed to happen. Another is confusing expected value with actual realized outcome. Beginners also often ignore variance and focus only on average return.",
+"quiz": [
+"What is the difference between expected value and variance?",
+"Why is a random variable useful in modeling asset returns?"
+]
+},
+
+"Statistics and Data Analysis": {
+"explanation": "Statistics helps quants extract meaning from financial data. Markets generate huge amounts of noisy information, and statistical tools help determine whether a pattern is meaningful or just random chance. Core concepts include mean, median, variance, standard deviation, correlation, regression, hypothesis testing, and confidence intervals. Descriptive statistics summarize data, while inferential statistics help make conclusions about a larger process based on a sample. In quant finance, statistics is used to analyze returns, compare strategies, validate signals, estimate relationships between variables, and measure model accuracy. Correlation tells how two assets move together, while regression can estimate how one variable responds to another. Hypothesis testing is useful for checking whether an alpha signal has predictive power or whether a result might have occurred by luck. Good data analysis also involves understanding outliers, missing values, survivorship bias, and overfitting. Without strong statistical discipline, quants can mistake noise for signal and deploy weak models.",
+"example": "1. Calculating the mean and standard deviation of daily returns for a stock.\n2. Measuring the correlation between oil prices and airline stocks.\n3. Running a regression to see whether a valuation factor predicts future returns.",
+"common_mistake": "A common mistake is trusting correlations without checking whether they are stable or statistically significant. Another mistake is ignoring data quality issues such as missing data or outliers.",
+"quiz": [
+"What does correlation measure in financial data?",
+"Why is hypothesis testing important when evaluating an alpha?"
+]
+},
+"Time Series Analysis": {
+"explanation": "Time series analysis studies data points collected over time, which makes it especially important in finance because prices, returns, volatility, and volume all evolve sequentially. Unlike ordinary datasets, financial time series often show autocorrelation, volatility clustering, non-stationarity, and regime shifts. A time series may have trends, seasonality, cycles, and random noise. Quants often analyze returns rather than raw prices because returns are usually more stationary and easier to model statistically. Key ideas include lagged relationships, moving averages, autoregressive models, stationarity, differencing, and forecasting. Time series analysis is used in signal generation, volatility estimation, trend following, mean reversion, and risk forecasting. Understanding whether a process is stationary matters because many statistical models assume stable properties over time. In quant finance, poor handling of time series structure can lead to lookahead bias, incorrect inference, and bad predictions.",
+"example": "1. Using moving averages to detect momentum in a stock price series.\n2. Modeling volatility clustering in returns over time.\n3. Testing whether a spread between two assets is mean reverting.",
+"common_mistake": "A common mistake is applying ordinary statistical methods to time series data without accounting for temporal dependence. Another is using non-stationary price levels directly in predictive models.",
+"quiz": [
+"Why are returns often used instead of raw prices in time series models?",
+"What does stationarity mean in a financial time series?"
+]
+},
+"Linear Algebra for Quant Finance": {
+"explanation": "Linear algebra is central to quantitative finance because many financial problems involve vectors, matrices, and systems of equations. Asset returns can be represented as vectors, while covariance relationships across many assets are often stored in matrices. Portfolio optimization, factor models, principal component analysis, and machine learning methods all depend heavily on linear algebra. A vector can represent returns, weights, or exposures. A matrix can represent historical returns, covariances, or factor loadings. Eigenvalues and eigenvectors help identify major sources of variation in markets, which is useful in risk modeling and dimensionality reduction. Matrix multiplication is used to combine portfolio weights with asset returns or exposures. Understanding linear algebra makes it easier to work with multi-asset portfolios and large datasets. It also supports efficient implementation of optimization and predictive models in quant research.",
+"example": "1. Representing a portfolio as a vector of asset weights.\n2. Using a covariance matrix to estimate portfolio risk.\n3. Applying principal component analysis to identify dominant market factors.",
+"common_mistake": "A common mistake is treating matrix operations as interchangeable with element-wise arithmetic. Another is not understanding the financial meaning of covariance matrices and factor loadings.",
+"quiz": [
+"How is a covariance matrix used in portfolio analysis?",
+"What financial insight can eigenvectors provide?"
+]
+},
+"Calculus and Optimization": {
+"explanation": "Calculus and optimization are used in quant finance to model change and to find the best solution under constraints. Calculus helps measure rates of change, sensitivities, and accumulated effects, while optimization helps choose portfolio weights, trading decisions, or model parameters that maximize or minimize an objective. In finance, objectives might include maximizing expected return, minimizing risk, reducing transaction costs, or balancing several goals at once. Derivatives in calculus measure sensitivity, such as how option prices change when volatility or price changes. Optimization often includes constraints, such as requiring weights to sum to one, limiting exposure, or capping leverage. Quants use optimization in portfolio construction, risk management, machine learning, and execution strategy design. A strong grasp of these topics helps translate financial intuition into precise mathematical decisions.",
+"example": "1. Minimizing portfolio variance subject to a target return.\n2. Computing how sensitive an option price is to changes in the underlying asset.\n3. Tuning model parameters to reduce forecasting error.",
+"common_mistake": "A common mistake is solving optimization problems without realistic constraints. Another is ignoring that mathematically optimal solutions can be unstable or impractical in live trading.",
+"quiz": [
+"Why are constraints important in portfolio optimization?",
+"How does calculus help in measuring financial sensitivity?"
+]
+},
+"Risk and Return": {
+"explanation": "Risk and return form the basic tradeoff in finance. Return measures how much an investment gains or loses, while risk measures the uncertainty or downside associated with that return. In quant finance, return can be measured in simple returns or log returns over different horizons. Risk can be measured using volatility, downside deviation, Value at Risk, expected shortfall, drawdown, and other metrics. A key idea is that higher expected return often comes with higher risk, but not always in a linear or stable way. Quants analyze risk-adjusted return, which compares profitability to the amount of risk taken. Measures such as Sharpe ratio help determine whether returns are strong relative to volatility. Risk analysis also includes understanding diversification, tail events, correlation shifts, and leverage. A quant must think not just about whether a strategy makes money, but whether it does so in a robust and controllable way.",
+"example": "1. Comparing two strategies using both average return and volatility.\n2. Measuring the maximum drawdown of a trading strategy.\n3. Calculating a Sharpe ratio to evaluate risk-adjusted performance.",
+"common_mistake": "A common mistake is focusing only on returns and ignoring downside risk. Another is assuming historical volatility fully captures future risk.",
+"quiz": [
+"What is the difference between raw return and risk-adjusted return?",
+"Why might Sharpe ratio be more useful than average return alone?"
+]
+},
+"Portfolio Theory": {
+"explanation": "Portfolio theory studies how to combine assets to achieve better risk-return outcomes than holding a single asset alone. The key insight is diversification: assets that do not move perfectly together can reduce total portfolio risk when combined. Modern Portfolio Theory uses expected returns, variances, and covariances to build efficient portfolios. The efficient frontier represents portfolios offering the highest expected return for a given level of risk. Portfolio weights determine exposure to each asset, and changes in correlation structure affect the benefit of diversification. In practice, quants use portfolio theory to construct investment strategies, allocate capital across signals, and manage constraints such as turnover, sector neutrality, leverage, and liquidity. Portfolio construction is not just about choosing good assets but about combining them intelligently. Strong portfolio design often matters as much as signal quality.",
+"example": "1. Combining stocks and bonds to reduce total portfolio volatility.\n2. Building an efficient portfolio from a set of expected returns and covariances.\n3. Allocating capital across multiple alpha signals rather than using a single signal alone.",
+"common_mistake": "A common mistake is assuming diversification always works equally well. During crises, correlations can rise sharply, reducing diversification benefits.",
+"quiz": [
+"Why does correlation matter in portfolio construction?",
+"What is the efficient frontier?"
+]
+},
+"Factor Models": {
+"explanation": "Factor models explain asset returns in terms of common underlying drivers called factors. Instead of analyzing each asset in isolation, quants identify broad influences such as market, size, value, momentum, quality, or industry-specific effects. A factor model breaks a return into systematic components and idiosyncratic noise. This is useful for understanding exposures, controlling unwanted risks, and building better alphas. In quantitative investing, factor models are used to estimate whether a stock is outperforming because of true stock-specific strength or simply because it has exposure to a known factor like momentum. Factors also help with risk modeling, portfolio neutrality, and performance attribution. A quant working with factor models must understand factor loadings, factor returns, residuals, and multicollinearity. These models are especially important in platforms like WorldQuant Brain, where factor neutralization and signal robustness matter a lot.",
+"example": "1. Measuring whether a stock's return is driven mostly by market beta.\n2. Building a value factor using price-to-book or earnings yield.\n3. Neutralizing sector and size exposure when testing an alpha.",
+"common_mistake": "A common mistake is confusing factor exposure with genuine alpha. Another is failing to neutralize broad systematic effects, which makes a signal look stronger than it really is.",
+"quiz": [
+"What is the purpose of a factor model in quant finance?",
+"Why is neutralization important when testing an alpha?"
+]
+},
+"Alpha Signals and Backtesting": {
+"explanation": "Alpha signals are rules or formulas that attempt to predict future returns or rank assets based on expected performance. Backtesting is the process of evaluating how a signal or strategy would have performed using historical data. In quant research, this is one of the most important steps because it helps determine whether an idea has predictive power before risking capital. A good alpha signal should be economically sensible, statistically supported, and robust across time and market regimes. Backtesting involves constructing signals, defining a trading rule, applying constraints, and measuring performance metrics such as return, Sharpe ratio, turnover, drawdown, and fitness. It is essential to avoid common research errors like lookahead bias, survivorship bias, data snooping, and overfitting. On WorldQuant Brain, this topic is especially important because the goal is to create alphas that perform well under platform evaluation metrics. Strong backtesting discipline separates serious research from random curve fitting.",
+"example": "1. Testing whether stocks with strong recent momentum outperform next month.\n2. Building a mean reversion signal based on short-term price reversal.\n3. Evaluating an earnings quality factor using historical simulation.",
+"common_mistake": "A common mistake is overfitting a signal to past data so that it looks good historically but fails in new periods. Another is accidentally using future information in the backtest.",
+"quiz": [
+"What is lookahead bias in backtesting?",
+"Why is robustness across different periods important for an alpha?"
+]
+},
+"Market Microstructure": {
+"explanation": "Market microstructure studies how trading actually happens in financial markets. It focuses on the mechanics of order placement, bid-ask spreads, order books, liquidity, price impact, slippage, and transaction costs. While many beginners focus only on forecasting returns, practical quant trading also depends on execution quality. A strategy that looks profitable before costs may become unprofitable once realistic trading frictions are included. Market microstructure helps quants understand how orders interact, why prices move after trades, and how different market participants influence liquidity. It is especially important for short-horizon signals, high-turnover strategies, and execution algorithms. Concepts such as spread crossing, adverse selection, market orders versus limit orders, and temporary versus permanent price impact are critical in real trading systems. Even in research environments, microstructure awareness improves realism and prevents inflated expectations.",
+"example": "1. Estimating the effect of bid-ask spread on a high-frequency strategy.\n2. Comparing the use of market orders and limit orders.\n3. Measuring slippage when a large order moves the market price.",
+"common_mistake": "A common mistake is ignoring transaction costs and assuming trades happen instantly at the last observed price. Another is overlooking liquidity constraints in smaller assets.",
+"quiz": [
+"What is slippage and why does it matter in trading?",
+"How does the bid-ask spread affect strategy profitability?"
+]
+},
+
+"Delay": {
+"explanation": "In WorldQuant Brain, delay tells you how many days pass before a signal is used for trading. A delay of 1 means today's alpha is built using information available before trading tomorrow. This is important because it prevents cheating by using information from the future. Delay helps make backtests more realistic. In quant research, you must always think carefully about when data becomes available and when a trade can actually happen. If you ignore delay, your alpha may look strong in testing but fail in reality. Delay is one of the most basic concepts in Brain because it directly affects whether a strategy is realistic and valid.",
+"example": "1. A Delay 1 alpha uses today's data and trades on the next day.\n2. A Delay 0 alpha reacts immediately, often used in settings with intraday assumptions.\n3. Comparing the same alpha under Delay 0 and Delay 1 can show whether performance is realistic or inflated.",
+"common_mistake": "A common mistake is forgetting that data must be available before the trade happens. Another mistake is building an alpha that unintentionally uses future information.",
+"quiz": [
+"What does Delay 1 mean in WorldQuant Brain?",
+"Why is delay important for realistic backtesting?"
+]
+},
+"Decay": {
+"explanation": "Decay in WorldQuant Brain controls how long an alpha signal remains active over time. Instead of letting a signal act only once, decay spreads its effect across several days. This can make a strategy smoother and reduce turnover. If a signal has useful information that lasts for more than one day, decay helps capture that persistence. A low decay means the signal changes quickly, while a higher decay means the signal fades more gradually. Choosing the right decay depends on how fast the signal disappears. Decay is useful because financial signals often do not vanish instantly after one trading day.",
+"example": "1. A momentum signal may work better with some decay because trends can last several days.\n2. A short-term reversal signal may need low decay because its effect disappears quickly.\n3. Applying decay can reduce noisy day-to-day changes in portfolio positions.",
+"common_mistake": "A common mistake is using too much decay on a fast signal, which makes it stale. Another is using no decay when the signal naturally persists for several days.",
+"quiz": [
+"What is the purpose of decay in an alpha?",
+"Why might too much decay hurt a short-term signal?"
+]
+},
+"Neutralization": {
+"explanation": "Neutralization removes unwanted exposure from an alpha. In WorldQuant Brain, an alpha may appear strong simply because it is accidentally betting on sectors, industries, countries, or other broad effects. Neutralization helps isolate the true predictive part of the signal. For example, if an alpha only works because it favors one sector, neutralizing by sector can show whether the idea still has value. This is important because strong alphas should not rely entirely on obvious common exposures. Neutralization makes a strategy cleaner, fairer, and often more robust.",
+"example": "1. Sector neutralization removes the effect of always being overweight tech stocks.\n2. Industry neutralization checks whether a stock-picking idea works within industries.\n3. Market neutralization helps reduce broad market direction exposure.",
+"common_mistake": "A common mistake is assuming a signal is true alpha when it is mostly just sector or market exposure. Another is over-neutralizing and destroying useful information.",
+"quiz": [
+"Why is neutralization used in alpha research?",
+"What can sector neutralization reveal about a signal?"
+]
+},
+"Turnover": {
+"explanation": "Turnover measures how much a portfolio changes from one period to the next. In WorldQuant Brain, low turnover usually means positions change slowly, while high turnover means the alpha frequently buys and sells different assets. Turnover matters because more trading usually means higher transaction costs and more execution difficulty. A signal with high returns but extremely high turnover may not be practical. Good alpha design often balances predictive power with trading efficiency. Understanding turnover helps you judge whether a strategy is realistic and sustainable.",
+"example": "1. A daily mean reversion strategy may have high turnover because positions change often.\n2. A slow value signal may have lower turnover because it updates less aggressively.\n3. Adding decay can sometimes reduce turnover by smoothing position changes.",
+"common_mistake": "A common mistake is focusing only on Sharpe or returns while ignoring turnover. Another is creating noisy alphas that trade too often without enough edge.",
+"quiz": [
+"What does high turnover tell you about a strategy?",
+"Why can high turnover be a problem even if returns look good?"
+]
+},
+"Fitness": {
+"explanation": "Fitness in WorldQuant Brain is a performance measure used to judge alpha quality. It usually combines return, risk, and trading behavior into a single score. A high fitness suggests the alpha is strong not just in raw return but also in overall quality. Since Brain does not reward returns alone, fitness helps identify ideas that are balanced and usable. Quants should pay attention to fitness because it often reflects whether an alpha is robust enough to matter. It is a more practical measure than simply chasing one big performance number.",
+"example": "1. Two alphas may have similar returns, but the one with better stability can have higher fitness.\n2. An alpha with strong returns but extreme turnover may have weaker fitness.\n3. Improving signal robustness can often improve fitness more than simply increasing raw return.",
+"common_mistake": "A common mistake is optimizing only for one metric, such as return, and ignoring overall quality. Another is treating fitness as magic without understanding the behavior behind it.",
+"quiz": [
+"Why is fitness more useful than looking at return alone?",
+"What kinds of alpha qualities can improve fitness?"
+]
+},
+"Sharpe Ratio": {
+"explanation": "Sharpe ratio measures return relative to risk. In WorldQuant Brain, it is one of the most important metrics for evaluating an alpha. A higher Sharpe ratio means the strategy earns more return for each unit of volatility. This is useful because a strategy with moderate but stable performance is often better than one with wild swings. Sharpe helps compare alphas on a risk-adjusted basis rather than just looking at total gains. In quant research, stable signals are usually preferred over unstable ones, and Sharpe is one way to measure that stability.",
+"example": "1. An alpha with steady monthly performance may have higher Sharpe than one with larger but unstable returns.\n2. Reducing noise in a signal can improve Sharpe even if raw return stays similar.\n3. Combining several weak but uncorrelated alphas can improve portfolio Sharpe.",
+"common_mistake": "A common mistake is chasing high return without checking whether volatility is also very high. Another is trusting Sharpe too much without checking drawdowns and robustness.",
+"quiz": [
+"What does Sharpe ratio measure?",
+"Why might a lower-return strategy still be better if it has a higher Sharpe?"
+]
+},
+"Rank Operators": {
+"explanation": "Rank operators are widely used in WorldQuant Brain to transform raw values into relative cross-sectional positions. Instead of using the original numbers directly, ranking sorts assets from lowest to highest and gives each asset a relative standing. This is helpful because financial data often contains outliers, and ranks reduce the effect of extreme values. Ranking also makes signals easier to compare across many stocks. In Brain, many alphas rely on rank because relative ordering is often more useful than raw magnitudes. A rank-based alpha asks which stocks look better or worse than others, not just which ones have large raw values.",
+"example": "1. Ranking stocks by earnings yield to identify relatively cheap stocks.\n2. Ranking momentum scores to go long the strongest and short the weakest assets.\n3. Using rank on volume change to compare unusual activity across stocks.",
+"common_mistake": "A common mistake is forgetting that rank removes absolute scale information. Another is using raw values when ranking would make the alpha more robust.",
+"quiz": [
+"Why are rank operators useful in alpha design?",
+"What information is reduced when you convert raw values into ranks?"
+]
+},
+"Winsorization and Outlier Control": {
+"explanation": "Outliers are extreme values that can distort an alpha. Winsorization is a method of limiting those extreme values so they do not dominate the signal. In WorldQuant Brain, this matters because financial data can contain unusual spikes, reporting errors, or rare extreme moves. If one or two stocks dominate the signal, the alpha may become unstable and unreliable. Outlier control helps make a strategy more robust and better behaved. It is especially important when working with raw fundamental or price-based data that may have very large values.",
+"example": "1. Limiting extreme valuation ratios before building a value alpha.\n2. Capping unusual return spikes that would otherwise dominate a signal.\n3. Reducing the influence of one abnormal stock observation in a cross-sectional model.",
+"common_mistake": "A common mistake is ignoring outliers and letting a few extreme observations control the alpha. Another is being too aggressive and removing meaningful signal along with noise.",
+"quiz": [
+"Why can outliers be dangerous in alpha construction?",
+"What is the purpose of winsorization?"
+]
+},
+"Correlation Between Alphas": {
+"explanation": "Two alphas may both look strong on their own, but if they behave almost the same way, combining them may add little value. Correlation between alphas measures how similarly they move or perform. In WorldQuant Brain, lower correlation between good alphas is valuable because it improves diversification. A set of different alphas can produce a more stable combined strategy than many copies of the same idea. Understanding correlation helps you avoid building redundant signals and encourages you to search for genuinely distinct sources of edge.",
+"example": "1. Two momentum alphas may have high correlation because they capture similar information.\n2. A value alpha and a short-term reversal alpha may have lower correlation.\n3. Combining low-correlation alphas can improve portfolio stability.",
+"common_mistake": "A common mistake is creating many small variations of the same signal and treating them as independent ideas. Another is ignoring correlation when combining alphas.",
+"quiz": [
+"Why is low correlation between alphas useful?",
+"What problem happens when many alphas are highly correlated?"
+]
+},
+"Overfitting in Alpha Research": {
+"explanation": "Overfitting happens when an alpha is designed too closely around past data and captures noise instead of true signal. In WorldQuant Brain, this is one of the biggest dangers. A backtest may look excellent, but if the alpha only worked because it matched random historical patterns, it will fail in the future. Overfitting often happens when too many parameters are tuned, too many filters are added, or the researcher keeps adjusting the idea until the backtest looks perfect. Good quant research prefers simple, logical, and robust ideas that work across different periods and settings. A strong alpha should survive reasonable changes and still show value.",
+"example": "1. Tweaking thresholds repeatedly until an alpha looks perfect in one sample period.\n2. Adding many conditions that improve historical results but have no clear economic logic.\n3. Finding a signal that works in one region or year but collapses everywhere else.",
+"common_mistake": "A common mistake is believing a beautiful backtest automatically means a good alpha. Another is ignoring out-of-sample testing and robustness checks.",
+"quiz": [
+"What is overfitting in quant research?",
+"Why is out-of-sample testing important?"
+]
+}
+}
+
